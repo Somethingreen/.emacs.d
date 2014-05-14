@@ -10,10 +10,13 @@
 		     paredit
 		     paredit-everywhere
 		     skewer-mode
-		     yasnippet))
+		     yasnippet
+		     color-theme
+		     color-theme-monokai))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
