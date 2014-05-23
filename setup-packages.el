@@ -11,7 +11,9 @@
 		     paredit
 		     paredit-everywhere
 		     skewer-mode
-		     yasnippet))
+		     yasnippet
+		     color-theme
+		     color-theme-monokai))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
