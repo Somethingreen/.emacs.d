@@ -14,6 +14,11 @@
 ;; Global modes
 (ido-mode 1)
 (yas-global-mode 1)
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
+(setq-default ac-auto-start 3)
+(setq-default indent-tabs-mode nil)
+
 
 (require 'mode-mappings)
 

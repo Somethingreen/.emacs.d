@@ -3,6 +3,7 @@
 		     flx
 		     flx-ido
 		     js2-mode
+		     ac-js2
 		     php-mode
 		     markdown-mode
 		     magit
@@ -14,6 +15,7 @@
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
