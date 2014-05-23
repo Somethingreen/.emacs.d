@@ -13,7 +13,8 @@
 		     skewer-mode
 		     yasnippet
 		     color-theme
-		     color-theme-monokai))
+		     color-theme-monokai
+		     auto-complete))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
