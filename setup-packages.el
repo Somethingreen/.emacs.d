@@ -8,13 +8,15 @@
 		     markdown-mode
 		     magit
 		     projectile
+                     org
 		     paredit
 		     paredit-everywhere
 		     skewer-mode
 		     yasnippet
 		     color-theme
 		     color-theme-monokai
-		     auto-complete))
+		     auto-complete
+                     auto-indent-mode))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
