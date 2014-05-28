@@ -10,4 +10,7 @@
 (color-theme-monokai)
 (set-face-attribute 'default t :font "Droid Sans Mono-13")
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
 (provide 'look-and-feel)
