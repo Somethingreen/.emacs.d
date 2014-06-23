@@ -18,7 +18,8 @@
 (global-auto-complete-mode t)
 (setq-default ac-auto-start 3)
 (setq-default indent-tabs-mode nil)
-
+(require 'expand-region)
+    (global-set-key (kbd "C-=") 'er/expand-region)
 
 (require 'mode-mappings)
 

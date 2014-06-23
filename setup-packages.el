@@ -16,7 +16,8 @@
 		     color-theme
 		     color-theme-monokai
 		     auto-complete
-                     auto-indent-mode))
+                     auto-indent-mode
+                     expand-region))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
