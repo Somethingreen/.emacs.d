@@ -16,6 +16,7 @@
 (yas-global-mode 1)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
+(delete-selection-mode 1)
 (setq-default ac-auto-start 3)
 (setq-default indent-tabs-mode nil)
 (require 'expand-region)
