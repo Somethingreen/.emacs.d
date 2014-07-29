@@ -25,6 +25,7 @@
 (require 'mode-mappings)
 
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(eval-after-load 'php-mode '(require 'setup-php-mode))
 
 ;; Open newline
 (defun open-line-below ()
@@ -78,3 +79,18 @@
 (global-set-key (kbd "<C-return>") 'open-line-below)
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(c-basic-indent 4)
+ '(c-basic-offset (quote set-from-style))
+ '(indent-tabs-mode nil)
+ '(php-mode-force-pear 1))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

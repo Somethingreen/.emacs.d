@@ -11,4 +11,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-hook 'markdown-mode-hook (lambda () (define-key markdown-mode-map (kbd "<tab>") 'yas-expand)))
 
+;; PHP
+(autoload 'php-mode "php-mode")
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
 (provide 'mode-mappings)
