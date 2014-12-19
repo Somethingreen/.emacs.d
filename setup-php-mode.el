@@ -27,6 +27,7 @@
     (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
     (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)))
 (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
+(add-hook 'php-mode-hook 'projectile-mode)
 
 (custom-set-variables  
  '(php-mode-force-pear 1)

@@ -5,6 +5,7 @@
 		     js2-mode
 		     ac-js2
 		     php-mode
+                     web-mode
 		     markdown-mode
 		     magit
 		     projectile
@@ -17,7 +18,9 @@
 		     color-theme-monokai
 		     auto-complete
                      auto-indent-mode
-                     expand-region))
+                     expand-region
+                     restclient
+                     ))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
