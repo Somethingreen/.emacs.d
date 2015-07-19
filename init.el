@@ -27,6 +27,7 @@
 
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'php-mode '(require 'setup-php-mode))
+(eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
 
 ;; Open newline
 (defun open-line-below ()

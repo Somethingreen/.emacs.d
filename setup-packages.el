@@ -20,6 +20,9 @@
                      auto-indent-mode
                      expand-region
                      restclient
+                     cider
+                     company
+                     rainbow-delimiters
                      ))
 
 (require 'package)
