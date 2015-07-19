@@ -1,4 +1,4 @@
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (require 'setup-packages)
 (require 'look-and-feel)
@@ -90,9 +90,4 @@
  '(c-basic-offset (quote set-from-style))
  '(indent-tabs-mode nil)
  '(php-mode-force-pear 1))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
