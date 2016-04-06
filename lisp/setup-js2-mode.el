@@ -3,11 +3,13 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (add-hook 'js2-mode-hook 'auto-indent-mode)
 (add-hook 'js2-mode-hook 'electric-pair-mode)
+(add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'js2-mode-hook 'flycheck-mode)
 
 ;;(setq-default js2-auto-indent-p t)
 (custom-set-variables  
  '(js2-basic-offset 4)
-;; '(js2-bounce-indent-p t)
+ '(js2-bounce-indent-p t)
 )
 
 ;;(require 'paredit)

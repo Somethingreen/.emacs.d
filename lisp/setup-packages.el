@@ -13,7 +13,6 @@
 		     paredit
 		     paredit-everywhere
 		     skewer-mode
-		     yasnippet
 		     monokai-theme
 		     auto-complete
                      auto-indent-mode
@@ -22,6 +21,7 @@
                      cider
                      company
                      rainbow-delimiters
+                     flycheck
                      ))
 
 (require 'package)
