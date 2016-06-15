@@ -11,6 +11,13 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
+;; Env vars
+(defun set-exec-path ()
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "GOPATH")
+  (exec-path-from-shell-copy-env "GOROOT"))
+(when window-system (set-exec-path))
+
 ;; Global modes
 (ido-mode 1)
 (require 'auto-complete-config)
@@ -20,13 +27,17 @@
 (setq-default ac-auto-start 3)
 (setq-default indent-tabs-mode nil)
 (require 'expand-region)
-    (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(dumb-jump-mode)
 
 (require 'mode-mappings)
 
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'php-mode '(require 'setup-php-mode))
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
+(eval-after-load 'sass-mode '(require 'setup-sass-mode))
+(eval-after-load 'go-mode '(require 'setup-go-mode))
 
 ;; Open newline
 (defun open-line-below ()
@@ -88,5 +99,15 @@
  '(c-basic-indent 4)
  '(c-basic-offset (quote set-from-style))
  '(indent-tabs-mode nil)
- '(php-mode-force-pear 1))
+ '(js2-basic-offset 4)
+ '(js2-bounce-indent-p nil)
+ '(org-support-shift-select t)
+ '(php-mode-force-pear 1)
+ '(tool-bar-mode nil))
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Input" :foundry "outline" :slant normal :weight normal :height 102 :width normal)))))

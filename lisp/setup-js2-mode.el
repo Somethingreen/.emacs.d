@@ -9,7 +9,7 @@
 ;;(setq-default js2-auto-indent-p t)
 (custom-set-variables  
  '(js2-basic-offset 4)
- '(js2-bounce-indent-p t)
+;; '(js2-bounce-indent-p t)
 )
 
 ;;(require 'paredit)

@@ -15,4 +15,8 @@
 (autoload 'php-mode "php-mode")
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 
+;; SASS
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+
 (provide 'mode-mappings)

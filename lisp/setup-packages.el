@@ -22,6 +22,10 @@
                      company
                      rainbow-delimiters
                      flycheck
+                     dumb-jump
+                     go-mode
+                     go-autocomplete
+                     exec-path-from-shell
                      ))
 
 (require 'package)
@@ -31,7 +35,7 @@
 ; activate all the packages (in particular autoloads)
 (package-initialize)
 
-; fetch the list of packages available 
+; fetch the list of packages available
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
 

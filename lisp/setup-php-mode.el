@@ -15,6 +15,7 @@
 ;;(add-hook 'php-mode-hook 'auto-indent-mbode)
 (add-hook 'php-mode-hook 'electric-pair-mode)
 (add-hook 'php-mode-hook 'electric-indent-mode)
+(add-hook 'php-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'php-mode-hook (lambda ()
     (defun ywb-php-lineup-arglist-intro (langelem)
       (save-excursion
