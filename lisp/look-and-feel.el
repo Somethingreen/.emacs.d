@@ -13,9 +13,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Input" :foundry "outline" :slant normal :weight normal :height 102 :width normal)))))
+ '(default ((t (:family "Input" :foundry "outline" :slant normal :weight normal :height 180 :width normal)))))
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+(use-package delight
+  :ensure t)
+(use-package projectile
+  :delight '(:eval (concat " p:" (projectile-project-name))))
 
 (provide 'look-and-feel)

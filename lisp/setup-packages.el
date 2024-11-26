@@ -1,20 +1,21 @@
 ; list the packages you want
 (setq package-list '(
-		     flx
-		     flx-ido
-		     js2-mode
-		     ac-js2
-		     php-mode
+                     use-package
+		             flx
+		             flx-ido
+		             js2-mode
+		             ac-js2
+		             php-mode
                      web-mode
-		     markdown-mode
-		     magit
-		     projectile
+		             markdown-mode
+		             magit
+		             projectile
                      org
-		     paredit
-		     paredit-everywhere
-		     skewer-mode
-		     monokai-theme
-		     auto-complete
+		             paredit
+		             paredit-everywhere
+		             skewer-mode
+		             monokai-theme
+		             auto-complete
                      auto-indent-mode
                      expand-region
                      restclient
@@ -26,11 +27,14 @@
                      go-mode
                      go-autocomplete
                      exec-path-from-shell
+                     lsp-mode
+                     lsp-ui
+                     which-key
+                     ag
                      ))
 
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)

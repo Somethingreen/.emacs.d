@@ -6,7 +6,7 @@
 	 (local (file-relative-name temp (file-name-directory buffer-file-name))))
     (list "php" (list "-f" local "-l"))))
 
-(add-to-list 'flymake-err-line-patterns 
+(add-to-list 'flymake-err-line-patterns
   '("\\(Parse\\|Fatal\\) error: +\\(.*?\\) in \\(.*?\\) on line \\([0-9]+\\)$" 3 4 nil 2))
 
 (add-to-list 'flymake-allowed-file-name-masks '("\\.php$" flymake-php-init))
@@ -27,10 +27,11 @@
         (vector (current-column))))
     (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
     (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)))
-(add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
+; too slow alongside LSP  (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
 (add-hook 'php-mode-hook 'projectile-mode)
+(add-hook 'php-mode-hook 'lsp)
 
-(custom-set-variables  
+(custom-set-variables
  '(php-mode-force-pear 1)
 )
 

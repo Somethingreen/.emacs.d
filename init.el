@@ -21,7 +21,7 @@
 ;; Global modes
 (ido-mode 1)
 (require 'auto-complete-config)
-(global-auto-complete-mode t)
+;(global-auto-complete-mode t)
 (delete-selection-mode 1)
 (desktop-save-mode 1)
 (setq-default ac-auto-start 3)
@@ -31,13 +31,29 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (dumb-jump-mode)
 
+(use-package plantuml-mode
+  :custom
+  (plantuml-jar-path "/home/agni/bin/plantuml.jar")
+  (plantuml-default-exec-mode 'jar)
+  (tab-width '4))
+
+(use-package org-journal)
+
+(use-package editorconfig
+  :ensure t
+  :delight
+  :config
+  (editorconfig-mode 1))
+
 (require 'mode-mappings)
 
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(eval-after-load 'web-mode '(require 'setup-web-mode))
 (eval-after-load 'php-mode '(require 'setup-php-mode))
 (eval-after-load 'clojure-mode '(require 'setup-clojure-mode))
 (eval-after-load 'sass-mode '(require 'setup-sass-mode))
 (eval-after-load 'go-mode '(require 'setup-go-mode))
+(eval-after-load 'elixir-mode '(require 'setup-elixir-mode))
 
 ;; Open newline
 (defun open-line-below ()
@@ -91,23 +107,28 @@
 (global-set-key (kbd "<C-return>") 'open-line-below)
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+(global-set-key (kbd "<C-next>") 'end-of-buffer)
+(global-set-key (kbd "<C-prior>") 'beginning-of-buffer)
+(global-set-key (kbd "<s-prior>") 'previous-buffer)
+(global-set-key (kbd "<s-next>") 'next-buffer)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(c-basic-indent 4)
- '(c-basic-offset (quote set-from-style))
+ '(c-basic-offset 'set-from-style)
  '(indent-tabs-mode nil)
- '(js2-basic-offset 4)
+ '(js-indent-level 4)
  '(js2-bounce-indent-p nil)
  '(org-support-shift-select t)
+ '(package-selected-packages
+   '(editorconfig yasnippet csv-mode org-journal d2-mode flycheck-plantuml plantuml-mode dap-mode dap-dlv-go yaml-mode smartparens elixir-mode scss-mode exec-path-from-shell go-autocomplete go-mode dumb-jump flycheck rainbow-delimiters company cider restclient expand-region auto-indent-mode auto-complete monokai-theme paredit-everywhere paredit projectile magit markdown-mode web-mode php-mode ac-js2 js2-mode flx-ido flx))
  '(php-mode-force-pear 1)
  '(tool-bar-mode nil))
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Input" :foundry "outline" :slant normal :weight normal :height 102 :width normal)))))
+ '(default ((t (:family "Input" :foundry "outline" :slant normal :weight normal :height 180 :width normal)))))
